@@ -1,15 +1,44 @@
 import java.io.*;
 import java.util.*;
-class p8
-{
+import java.lang.*;
+class p8{
 public static void main(String args[])
 {
-char a='*';
-if((a>=65&&a<=90)||(a>=97&&a<=122))
-System.out.println("Alphabet");
-else if(a>=48&&a<=57)
-System.out.println("digit");
+int b,e,n,c=1,m=1,i;
+Scanner s = new Scanner(System.in);
+System.out.println("enter size");
+e=s.nextInt();
+int [] a = new int[e];
+for(i=0;i<a.length;i++)
+{
+System.out.println("enter element");
+b=s.nextInt();
+a[i]=b;
+}
+Arrays.sort(a);
+int r=a[0];
+for(i=1;i<e;i++)
+{
+if(a[i]==a[i-1])
+c++;
 else
-System.out.println("special character");
+{
+if(c>m)
+{
+m=c;
+r=a[i-1];
+}
+c=1;
 }
 }
+if(c>m)
+{
+m=c;
+r=a[i-1];
+}
+System.out.println(r);
+}
+}
+
+
+
