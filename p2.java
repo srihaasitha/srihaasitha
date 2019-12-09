@@ -1,22 +1,28 @@
 import java.io.*;
-import java.util.*;
-import java.lang.*;
+class calculator
+{
+static double powerInt(int num1,int num2)
+{
+double r=0;
+r=Math.pow(num1,num2);
+return r;
+}
+static double powerDouble(double num1,double num2)
+{
+double r=0;
+r=Math.pow(num1,num2);
+return r;
+}
+}
 class p2
 {
 public static void main(String args[])
 {
-int min,max;
-int [] a = new int[]{1,2,3,4,5};
-min=a[0];
-max=a[0];
-for(int i=0;i<5;i++)
-{
-if(min>a[i])
-min=a[i];
-if(a[i]>max)
-max=a[i];
-}
-System.out.println("min is:"+min);
-System.out.println("max is:"+max);
+double a,b;
+a=calculator.powerInt(10,20);
+b=calculator.powerDouble(10d,20d);
+System.out.println(a);
+System.out.println(b);
 }
 }
+
