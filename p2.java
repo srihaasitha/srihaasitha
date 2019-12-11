@@ -1,28 +1,60 @@
-import java.io.*;
-class calculator
+class shape
 {
-static double powerInt(int num1,int num2)
+void draw()
 {
-double r=0;
-r=Math.pow(num1,num2);
-return r;
+System.out.println("Drawing shape");
 }
-static double powerDouble(double num1,double num2)
+void erase()
 {
-double r=0;
-r=Math.pow(num1,num2);
-return r;
+System.out.println("Erasing shape");
+}
+}
+class circle extends shape
+{
+void draw()
+{
+System.out.println("Drawing circle");
+}
+void erase()
+{
+System.out.println("Erasing circle");
+}
+}
+class triangle extends shape
+{
+void draw()
+{
+System.out.println("Drawing triangle");
+}
+void erase()
+{
+System.out.println("Erasing triangle");
+}
+}
+class square extends shape
+{
+void draw()
+{
+System.out.println("Drawing square");
+}
+void erase()
+{
+System.out.println("Erasing square");
 }
 }
 class p2
 {
 public static void main(String args[])
 {
-double a,b;
-a=calculator.powerInt(10,20);
-b=calculator.powerDouble(10d,20d);
-System.out.println(a);
-System.out.println(b);
+shape c = new circle();
+shape t = new triangle();
+shape s = new square();
+c.draw();
+c.erase();
+t.draw();
+t.erase();
+s.draw();
+s.erase();
 }
 }
 
